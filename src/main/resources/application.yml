@@ -1,0 +1,7 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+datasource:
+  jdbc-url: jdbc:postgresql://localhost:5432/adt_crawler
+  username: adt
+  password: adt
