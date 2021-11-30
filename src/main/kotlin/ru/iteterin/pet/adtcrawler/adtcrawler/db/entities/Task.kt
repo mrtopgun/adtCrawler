@@ -2,9 +2,7 @@ package ru.iteterin.pet.adtcrawler.adtcrawler.db.entities
 
 import org.springframework.data.annotation.CreatedDate
 import java.time.LocalDateTime
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
 
 @Entity
 @Table(name = "tasks")
@@ -13,6 +11,7 @@ data class Task(
      * Идентификатор задачи
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     val taskId: Long = 0,
 
     /**
