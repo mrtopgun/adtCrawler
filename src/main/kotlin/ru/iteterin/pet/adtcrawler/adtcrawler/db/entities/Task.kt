@@ -23,5 +23,16 @@ data class Task(
      * Время создания задачи
      */
     @CreatedDate
-    val createAt: LocalDateTime = LocalDateTime.now()
+    val createAt: LocalDateTime = LocalDateTime.now(),
+
+    /**
+     * Время изменения задачи
+     */
+    val modifiedAt: LocalDateTime,
+
+    /**
+     * Статус обработки задачи
+     */
+    @Enumerated(EnumType.STRING)
+    val state: EventStatus = EventStatus.NEW
 )

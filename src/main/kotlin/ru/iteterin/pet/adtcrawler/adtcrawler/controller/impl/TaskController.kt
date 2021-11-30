@@ -5,13 +5,12 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
 import ru.iteterin.pet.adtcrawler.adtcrawler.controller.Api
 import ru.iteterin.pet.adtcrawler.adtcrawler.db.entities.Task
-import ru.iteterin.pet.adtcrawler.adtcrawler.services.KafkaService
 import ru.iteterin.pet.adtcrawler.adtcrawler.services.TaskService
 
 @RestController
 class TaskController(
     private val taskService: TaskService
-): Api {
+) : Api {
     override fun createTask(
         task: Task
     ): ResponseEntity<Any> =

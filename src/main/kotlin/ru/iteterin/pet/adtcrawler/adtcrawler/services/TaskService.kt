@@ -1,6 +1,7 @@
 package ru.iteterin.pet.adtcrawler.adtcrawler.services
 
 import org.springframework.stereotype.Service
+import ru.iteterin.pet.adtcrawler.adtcrawler.db.entities.EventStatus
 import ru.iteterin.pet.adtcrawler.adtcrawler.db.entities.Task
 import ru.iteterin.pet.adtcrawler.adtcrawler.db.repositories.TaskRepository
 
@@ -16,5 +17,10 @@ class TaskService(
         } catch (e: Exception) {
 
         }
+    }
+
+    fun onNewTask() {
+        val newTask = taskRepository.findByState(EventStatus.NEW)
+        println(newTask)
     }
 }

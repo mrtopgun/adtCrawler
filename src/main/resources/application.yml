@@ -3,6 +3,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate:
       ddl-auto: create
+    show-sql: true
   datasource:
     url: jdbc:postgresql://localhost:5432/adt_crawler
     username: adt
@@ -10,4 +11,8 @@ spring:
     driverClassName: org.postgresql.Driver
   kafka:
     producer:
-      bootstrap-servers: 0.0.0.0:9092
+      #bootstrap-servers: 0.0.0.0:9092
+      bootstrap-servers: localhost:29092
+    consumer:
+      bootstrap-servers: localhost:29092
+      #bootstrap-servers: 0.0.0.0:9092
