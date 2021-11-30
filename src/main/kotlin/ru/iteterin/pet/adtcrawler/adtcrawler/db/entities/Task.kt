@@ -28,7 +28,7 @@ data class Task(
     /**
      * Время изменения задачи
      */
-    val modifiedAt: LocalDateTime,
+    val modifiedAt: LocalDateTime? = null,
 
     /**
      * Статус обработки задачи

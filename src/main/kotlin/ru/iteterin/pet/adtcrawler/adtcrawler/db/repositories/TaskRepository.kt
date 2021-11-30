@@ -5,5 +5,5 @@ import ru.iteterin.pet.adtcrawler.adtcrawler.db.entities.EventStatus
 import ru.iteterin.pet.adtcrawler.adtcrawler.db.entities.Task
 
 interface TaskRepository : JpaRepository<Task, Long> {
-    fun findByState(state: EventStatus): Task?
+    fun findByState(state: EventStatus): List<Task>?
 }
