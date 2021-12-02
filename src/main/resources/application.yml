@@ -16,3 +16,5 @@ spring:
     consumer:
       bootstrap-servers: localhost:29092
       #bootstrap-servers: 0.0.0.0:9092
+server:
+  port: 8080

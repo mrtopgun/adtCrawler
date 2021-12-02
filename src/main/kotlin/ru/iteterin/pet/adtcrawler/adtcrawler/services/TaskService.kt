@@ -19,7 +19,7 @@ class TaskService(
         }
     }
 
-    fun onNewTask() {
+    fun readTask() {
         val newTask = taskRepository.findByState(EventStatus.NEW)
         println(newTask)
     }

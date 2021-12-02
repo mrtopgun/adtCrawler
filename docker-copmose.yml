@@ -52,3 +52,19 @@ services:
       SERVER_SERVLET_CONTEXTPATH: "/"
     depends_on:
       - kafka
+  adtCrawler:
+    container_name:
+      adt_crawler
+    ports:
+      - "8080:8080"
+    image: adt_crawler:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      SPRING_KAFKA_PRODUCER_BOOTSTRAP-SERVERS: kafka:9092
+      SPRING_KAFKA_CONSUMER_BOOTSTRAP-SERVERS: kafka:9092
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/adt_crawler
+      SERVER_PORT: 8080
+    depends_on:
+      - postgres

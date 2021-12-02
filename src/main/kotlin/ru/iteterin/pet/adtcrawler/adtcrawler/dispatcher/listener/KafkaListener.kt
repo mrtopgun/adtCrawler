@@ -1,17 +1,18 @@
 package ru.iteterin.pet.adtcrawler.adtcrawler.dispatcher.listener
 
 import org.springframework.kafka.annotation.KafkaListener
+import org.springframework.messaging.handler.annotation.Payload
 import org.springframework.stereotype.Service
-import ru.iteterin.pet.adtcrawler.adtcrawler.services.TaskService
+import ru.iteterin.pet.adtcrawler.adtcrawler.dispatcher.handler.NewTaskEventHandler
 
 @Service
 class KafkaListener(
-    private val taskService: TaskService
+    private val newTaskEventHandler: NewTaskEventHandler
 ) {
 
     @KafkaListener(topics = ["adt-crawler-create-task-event"], groupId = "adt-crawler")
-    fun listenNewTask(massage: String) {
-        taskService.onNewTask()
+    fun onNewTask(@Payload massage: String) {
+        newTaskEventHandler.process(massage)
     }
 
 }
