@@ -1,9 +1,9 @@
-package ru.iteterin.pet.adtcrawler.adtcrawler.dispatcher.listener
+package ru.iteterin.pet.adtcrawler.dispatcher.listener
 
 import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.messaging.handler.annotation.Payload
 import org.springframework.stereotype.Service
-import ru.iteterin.pet.adtcrawler.adtcrawler.dispatcher.handler.NewTaskEventHandler
+import ru.iteterin.pet.adtcrawler.dispatcher.handler.NewTaskEventHandler
 
 @Service
 class KafkaListener(

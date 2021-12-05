@@ -24,6 +24,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springframework.kafka:spring-kafka")
     implementation ("org.postgresql:postgresql")
+    implementation("it.skrape:skrapeit:1.1.5")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

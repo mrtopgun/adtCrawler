@@ -1,11 +1,11 @@
-package ru.iteterin.pet.adtcrawler.adtcrawler.controller.impl
+package ru.iteterin.pet.adtcrawler.controller.impl
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
-import ru.iteterin.pet.adtcrawler.adtcrawler.controller.Api
-import ru.iteterin.pet.adtcrawler.adtcrawler.db.entities.Task
-import ru.iteterin.pet.adtcrawler.adtcrawler.services.TaskService
+import ru.iteterin.pet.adtcrawler.controller.Api
+import ru.iteterin.pet.adtcrawler.db.entities.Task
+import ru.iteterin.pet.adtcrawler.services.TaskService
 
 @RestController
 class TaskController(

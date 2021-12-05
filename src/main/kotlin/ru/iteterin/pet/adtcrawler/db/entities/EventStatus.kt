@@ -1,4 +1,4 @@
-package ru.iteterin.pet.adtcrawler.adtcrawler.db.entities
+package ru.iteterin.pet.adtcrawler.db.entities
 
 enum class EventStatus {
     NEW,

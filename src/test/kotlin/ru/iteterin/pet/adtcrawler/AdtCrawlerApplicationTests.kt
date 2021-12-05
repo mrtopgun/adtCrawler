@@ -1,4 +1,4 @@
-package ru.iteterin.pet.adtcrawler.adtcrawler
+package ru.iteterin.pet.adtcrawler
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

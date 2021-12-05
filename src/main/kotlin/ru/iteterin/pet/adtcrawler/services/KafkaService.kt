@@ -1,4 +1,4 @@
-package ru.iteterin.pet.adtcrawler.adtcrawler.services
+package ru.iteterin.pet.adtcrawler.services
 
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Component
